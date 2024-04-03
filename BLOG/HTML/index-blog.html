@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EminenceGames</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.16.0/dist/pdf-lib.js"></script>
+
+
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo">Eminence<span>Games</span></a>
+
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-text container">
+      <h1>Eminence Games Blog</h1>
+      <p class="home-subtitle">El espacio perfecto para los Gamers sobre noticias de sus videojuegos favoritos</p>
+    </div>
+  </section>
+  <section>
+    <div class="post-filter container">
+      <span class="filter-item active-filter" data-filter="all">All</span>
+      <span class="filter-item" data-filter="web">Web</span>
+      <span class="filter-item" data-filter="mobile">Mobile</span>
+      <span class="filter-item" data-filter="games">Games</span>
+    </div>
+      <button class="btn-post" id="toggle-form-button">Crear una Publicación</button>
+    
+
+    <div class="form-container">
+      <form id="new-post-form" class="new-post-form">
+        <label for="title">Titulo:</label><br />
+        <input type="text" id="title" name="title" required /><br />
+        <label for="content">Contenido:</label><br />
+        <textarea id="content" name="content" rows="4" cols="50" required></textarea><br />
+        <label for="image">Imagen:</label><br />
+        <input type="file" id="image" name="image" accept="image/*" required /> <br />
+        <input type="submit" value="Publicar" />
+        <button type="button" id="cancel-edit-button" class="cancel-edit-button">Cancelar</button>
+      </form>
+    </div>
+
+    
+
+  </section>
+  </header>
+  <section class="blog">
+    <div class="container"></div>
+
+    
+  </section>
+
+
+  <script src="../JavaScript/script.js"></script>
+</body>
+
+</html>

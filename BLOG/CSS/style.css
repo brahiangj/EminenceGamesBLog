@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #463a5f;
+  --secondary-color: #1a1e21;
+  --text-color: #172317;
+  --bg-color: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--bg-color);
+}
+
+.login {
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.login:hover {
+  background: #463a5f;
+  transition: 0.3s;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.home {
+  position: relative;
+  color: var(--bg-color);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../Imagenes/wallpaper_call_of_duty_modern_warfare_3_-_collections_01_1920x1080.jpg);
+  background-size: cover;
+  filter: brightness(0.65);
+  z-index: -1;
+}
+
+.home h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.post-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filter-item {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-color);
+  margin: 0 5px;
+}
+
+.filter-item:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.active-filter {
+  background: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.btn-post  {
+  width: 8rem;
+  height: 3rem;
+  margin-left: 1.8rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-post :hover {
+  background-color: var(--secondary-color);
+}
+
+.form-container {
+  display: none;
+}
+
+.form-container.show-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.397);
+}
+
+.new-post-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.new-post-form input[type="text"],
+.new-post-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.new-post-form input[type="file"] {
+  margin-bottom: 15px;
+}
+
+.new-post-form input[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.new-post-form input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+/* /Estilo de los Post/ */
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+  align-items: center; 
+  justify-content: center;
+}
+
+.post {
+  max-width: 25%;
+  max-height: 20%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 1.5rem;
+  margin-bottom: 16px;
+  border-radius: 1.5rem;
+  font-size: 0.9rem; 
+  line-height: 1.5; 
+  box-shadow: 5px 3px 3px 0.9px rgba(119, 117, 117, 0.699);
+}
+
+.post h2 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 1.5rem; /* Reduce font size */
+  margin-bottom: 0.9rem;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.post p {
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  word-wrap: break-word;
+  font-size: 0.9rem; /* Reduce font size */
+  line-height: 1.5; /* Adjust line height */
+  color: #333;
+}
+
+.delete-post {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 1rem;
+}
+
+.delete-post:hover {
+  background-color: var(--secondary-color);
+}
+
+.download-pdf{
+  position: relative;
+  left: 55px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem
+}
+
+.download-pdf:hover {
+  background-color: var(--secondary-color);
+}
+
+.blog {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.edit-post{
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  margin-top: 1rem;
+}
+
+.edit-post:hover{
+  background-color:var(--secondary-color);
+  
+}
+
+
+
+.cancel-edit-button {
+  width: 6.5rem;
+  height: 2.3rem;
+  margin-left: 10px;
+  background-color: #463a5f;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+
+}
+
+.cancel-edit-button:hover {
+  background-color: #1a1e21;
+}
+
